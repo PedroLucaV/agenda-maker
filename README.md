@@ -1,4 +1,8 @@
-# projeto
+# Projeto
+
+## Proposta
+
+Lorem ipsum dolor sit amet
 
 ## Como Contribuir
 
