@@ -10,8 +10,8 @@ Lorem ipsum dolor sit amet
 
 1. **Clone o repositório e navegue para a branch correta**:
    ```sh
-   git clone https://github.com/usuario/projeto-marketplace.git
-   cd projeto-marketplace
+   git clone https://github.com/usuario/agenda-maker.git
+   cd agenda-maker
    git checkout front-end  # Ou back-end, dependendo da sua equipe
    ```
 
