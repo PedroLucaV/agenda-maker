@@ -2,7 +2,7 @@
 
 ## Proposta
 
-Lorem ipsum dolor sit amet
+Este é um projeto que visa automatizar e facilitar a visualização e marcação de horários na sala maker, permitindo com que os organizadores do espaço maker possam confirmar e gerenciar os horários agendados.
 
 ## Como Contribuir
 
