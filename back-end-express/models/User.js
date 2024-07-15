@@ -1,4 +1,5 @@
 import { DataTypes } from '@sequelize/core';
+import Appointments from './Appointments.js';
 import sequelize from '../controller/dbconfig.js';
 
 const User = sequelize.define('user', {
