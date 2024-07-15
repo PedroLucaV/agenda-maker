@@ -16,6 +16,10 @@ const Appointments = sequelize.define('appointments', {
       type: DataTypes.TEXT,
       allowNull: true
     },
+    categoria: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     data_marcada: {
       type: "TIMESTAMP",
       allowNull: false
