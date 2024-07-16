@@ -12,4 +12,48 @@ router.get('/agendamentos', async (req, res) => { //retorna todos os agendamento
   }
 });
 
+router.post('/agendamentos', async (req, res) => {
+  const { titulo, descricao, categoria, data_marcada, data_termino, data_bloqueda, usuario_id } = req.body;
+
+  try {
+    const newAppointment = await Appointments.create({
+      titulo,
+      descricao,
+      categoria,
+      data_marcada,
+      data_termino,
+      data_bloqueda,
+      usuario_id
+    });
+
+    res.status(201).json(newAppointment);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
+  const { id, nome, foto_usuario, email, senha, is_admin, telefone } = req.body;
+
+  if (!id || !nome || !email || !senha) {
+    return res.status(400).json({ message: "Os campos obrigatórios não foram preenchidos." });
+  }
+
+  try {
+    const newUser = await User.create({
+      id,
+      nome,
+      foto_usuario,
+      email,
+      senha,
+      is_admin,
+      telefone
+    });
+
+    res.status(201).json(newUser);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+})
+
 export default router;
