@@ -56,4 +56,13 @@ router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
   }
 })
 
+router.get('/usuarios',async (req, res) => { //retorna todos os agendamentos na base de dados
+  try {
+    const usuarios = await User.findAll();
+    res.json(usuarios);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+})
+
 export default router;
