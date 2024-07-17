@@ -68,8 +68,6 @@ router.get('/usuarios',async (req, res) => { //retorna todos os agendamentos na 
 router.put('/agendamento/:id', async (req, res) => {
   const {id} = req.params;
   const {data_bloqueda} = req.body;
-  console.log(data_bloqueda)
-  console.log(typeof data_bloqueda)
   try {
     const agendamento = await Appointments.findByPk(id);
     agendamento.data_bloqueda = data_bloqueda;
