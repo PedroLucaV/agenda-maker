@@ -56,4 +56,26 @@ router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
   }
 })
 
+router.get('/usuarios',async (req, res) => { //retorna todos os agendamentos na base de dados
+  try {
+    const usuarios = await User.findAll();
+    res.json(usuarios);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+})
+
+router.put('/agendamento/:id', async (req, res) => {
+  const {id} = req.params;
+  const {data_bloqueda} = req.body;
+  try {
+    const agendamento = await Appointments.findByPk(id);
+    agendamento.data_bloqueda = data_bloqueda;
+    await agendamento.save();
+    res.json(agendamento)
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+})
+
 export default router;

@@ -29,9 +29,9 @@ const Appointments = sequelize.define('appointments', {
         allowNull: false
     },
     data_bloqueda: {
-      type: DataTypes.CHAR(60),
+      type: DataTypes.TINYINT(1),
       allowNull: false,
-      defaultValue: false
+      defaultValue: 0
     },
     usuario_id: {
         type: DataTypes.CHAR(40),
