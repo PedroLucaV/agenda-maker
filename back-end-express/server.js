@@ -1,11 +1,15 @@
-import express from "express";
+import express, { json } from "express";
 import sequelize from './controller/dbconfig.js';
+import bodyParser from 'body-parser';
 import router from "./router.js";
 import dotenv from 'dotenv';
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(router);
 
