@@ -1,5 +1,6 @@
 import { Router } from "express";
 import User from './models/User.js';
+import { v4 as uuidv4 } from 'uuid';
 import Appointments from "./models/Appointments.js";
 const router = Router();
 
@@ -17,6 +18,7 @@ router.post('/agendamentos', async (req, res) => {
 
   try {
     const newAppointment = await Appointments.create({
+      id: uuidv4(),
       titulo,
       descricao,
       categoria,
@@ -33,7 +35,7 @@ router.post('/agendamentos', async (req, res) => {
 });
 
 router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
-  const { id, nome, foto_usuario, email, senha, is_admin, telefone } = req.body;
+  const {nome, foto_usuario, email, senha, is_admin, telefone } = req.body;
 
   if (!id || !nome || !email || !senha) {
     return res.status(400).json({ message: "Os campos obrigatórios não foram preenchidos." });
@@ -41,7 +43,7 @@ router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
 
   try {
     const newUser = await User.create({
-      id,
+      id: uuidv4(),
       nome,
       foto_usuario,
       email,

@@ -3,7 +3,7 @@ import sequelize from '../controller/dbconfig.js';
 
 const Appointments = sequelize.define('appointments', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.CHAR(40),
       autoIncrement: true,
       primaryKey: true,
       allowNull: false,
