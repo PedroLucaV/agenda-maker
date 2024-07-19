@@ -1,7 +1,14 @@
 import "./Home.css";
-
+import Footer from "./Components/footer";
 const Home = () => {
-  return <h1>Página Inicial (Login)</h1>;
+  return (
+    <>
+      <div className="box">
+      
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
