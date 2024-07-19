@@ -1,7 +1,13 @@
 import "./App.css";
+import "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 const App = () => {
-  return <h1>Página Principal (Dashboard)</h1>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default App;
