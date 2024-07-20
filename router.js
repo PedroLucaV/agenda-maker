@@ -37,7 +37,7 @@ router.post('/agendamentos', async (req, res) => {
 router.post('/usuario', async (req, res) => { //será substituida pelo microsoft
   const {nome, foto_usuario, email, senha, is_admin, telefone } = req.body;
 
-  if (!id || !nome || !email || !senha) {
+  if (!nome || !email || !senha) {
     return res.status(400).json({ message: "Os campos obrigatórios não foram preenchidos." });
   }
 
