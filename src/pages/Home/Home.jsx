@@ -1,6 +1,6 @@
 import "./Home.css";
 import Container from "./Components/Container";
-import Footer from "./Components/Footer";
+import Footer from "./Components/footer";
 const Home = () => {
   return (
     <>
