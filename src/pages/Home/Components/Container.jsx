@@ -1,6 +1,6 @@
 const Container = () => {
     return(
-        <div className="d-flex justify-content-center bg-light container">Main</div>
+        <div className="d-grid rounded bg-light container container-login">Main</div>
     );
 }
 
