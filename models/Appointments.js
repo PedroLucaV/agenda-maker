@@ -1,5 +1,5 @@
 import { DataTypes } from '@sequelize/core';
-import sequelize from '../controller/dbconfig.js';
+import sequelize from '../config/dbconfig.js';
 
 const Appointments = sequelize.define('appointments', {
     id: {

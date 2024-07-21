@@ -1,7 +1,8 @@
 import express, { json } from "express";
 import sequelize from './controller/dbconfig.js';
 import bodyParser from 'body-parser';
-import router from "./router.js";
+import userRoutes from "./routes/usersRoutes.js";
+import appoitmentRoutes from './routes/appoitmentsRoutes.js'
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -11,7 +12,8 @@ const PORT = process.env.PORT;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(router);
+app.use("/users", userRoutes);
+app.use('/appointments', appoitmentRoutes)
 
 sequelize.authenticate().then(() => {
     console.log('Database connected!');
