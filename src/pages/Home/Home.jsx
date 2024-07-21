@@ -1,14 +1,13 @@
-import "./Home.css";
-import Container from "./Components/Container";
-import Footer from "./Components/Footer";
+import HomeContainer from './Components/Container';
+import Footer from './Components/footer';
+import './Home.css';
+
 const Home = () => {
   return (
-    <>
-        <div className="body-home d-flex">
-          <Container />
-          {/* <Footer /> */}
-        </div>
-    </>
+    <div className="home-page">
+      <HomeContainer />
+      <Footer />
+    </div>
   );
 };
 
