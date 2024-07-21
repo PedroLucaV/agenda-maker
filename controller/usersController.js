@@ -1,4 +1,4 @@
-import User from './models/User.js';
+import User from '../models/User.js';
 import { v4 as uuidv4 } from 'uuid';
 
 export const createUser = async (req, res) => {

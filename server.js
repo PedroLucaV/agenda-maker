@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import sequelize from './controller/dbconfig.js';
+import sequelize from './config/dbconfig.js';
 import bodyParser from 'body-parser';
 import userRoutes from "./routes/usersRoutes.js";
 import appoitmentRoutes from './routes/appoitmentsRoutes.js'

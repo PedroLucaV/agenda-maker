@@ -1,4 +1,4 @@
-import Appointments from "./models/Appointments.js";
+import Appointments from "../models/Appointments.js";
 import { v4 as uuidv4 } from 'uuid';
 
 export const listAppointments = async (req, res) => {
