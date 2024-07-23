@@ -1,6 +1,8 @@
 // Dependencies:
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import multiMonthPlugin from "@fullcalendar/multimonth";
 
 // Stylesheets:
 import "./Calendar.css";
