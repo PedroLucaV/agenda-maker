@@ -40,7 +40,7 @@ const Calendar = () => {
           multiMonthYear: "Ano",
           timeGridWeek: "Semana",
         }}
-        eventClick={(event) => onEventClick(event)}
+        eventClick={({event}) => onEventClick(event)}
         dateClick={(date) => onDateClick(date)}
         events={[
           { title: "Olá mundo!", date: "2024-07-22" },
