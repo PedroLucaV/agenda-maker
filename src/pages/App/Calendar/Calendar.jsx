@@ -14,7 +14,7 @@ import onEventClick from "../../../modules/onEventClick";
 
 const Calendar = () => {
   return (
-    <section className="container calendar p-4 h-100 border-0 rounded-4">
+    <section className="container calendar h-100 border-0 rounded-4">
       <FullCalendar
         plugins={[
           dayGridPlugin,

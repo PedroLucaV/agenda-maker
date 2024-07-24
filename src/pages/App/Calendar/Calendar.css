@@ -7,6 +7,18 @@
 .fc {
   /* border: 1px solid red; */
 }
+.fc .fc-header-toolbar {
+  padding: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #3900F080;
+}
+.fc .fc-footer-toolbar {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.fc-view-harness {
+  margin: 0 1.5rem;
+}
+
 .fc .fc-daygrid-day.fc-day {
   background-color: #FFF;
 }
@@ -17,7 +29,7 @@
 .fc .fc-daygrid-day.fc-day-sat {
   background-color: hsl(0, 0%, 90%);
 }
-.fc-day-other {
+.fc .fc-day-other {
   opacity: 0.85;
 }
 
