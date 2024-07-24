@@ -3,6 +3,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import multiMonthPlugin from "@fullcalendar/multimonth";
+import timeGridPlugin from '@fullcalendar/timegrid'
 
 // Stylesheets:
 import "./Calendar.css";
@@ -19,7 +20,12 @@ const Calendar = () => {
   return (
     <section className="container calendar p-4 h-100 border-0 rounded-4">
       <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin, multiMonthPlugin]}
+        plugins={[
+          dayGridPlugin, 
+          interactionPlugin, 
+          multiMonthPlugin,
+          timeGridPlugin
+        ]}
         themeSystem="bootstrap5"
         initialView="dayGridMonth"
         locale={"pt-br"}
@@ -30,12 +36,13 @@ const Calendar = () => {
         }}
         footerToolbar={{
           start: 'today',
-          end: 'dayGridMonth,multiMonthYear'
+          end: 'timeGridWeek,dayGridMonth,multiMonthYear'
         }}
         buttonText={{
           today: "Ir para hoje",
           dayGridMonth: "Mês",
-          multiMonthYear: "Ano"
+          multiMonthYear: "Ano",
+          timeGridWeek: "Semana"
         }}
         eventClick={({ event }) => onEventClick(event)}
         dateClick={({ dateStr }) => onDateClick(dateStr)}
