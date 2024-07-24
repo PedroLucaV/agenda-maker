@@ -4,6 +4,23 @@
   background-color: #d9d9d9;
 }
 
+.fc {
+  /* border: 1px solid red; */
+}
+.fc .fc-daygrid-day.fc-day {
+  background-color: #FFF;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: hsl(47, 100%, 85%);
+}
+.fc .fc-daygrid-day.fc-day-sun, 
+.fc .fc-daygrid-day.fc-day-sat {
+  background-color: hsl(0, 0%, 90%);
+}
+.fc-day-other {
+  opacity: 0.85;
+}
+
 /* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
 .calendar .header {
   flex-direction: row;
