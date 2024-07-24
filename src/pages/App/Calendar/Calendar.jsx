@@ -39,7 +39,7 @@ const Calendar = () => {
           end: 'timeGridWeek,dayGridMonth,multiMonthYear'
         }}
         buttonText={{
-          today: "Ir para hoje",
+          today: "Data atual",
           dayGridMonth: "Mês",
           multiMonthYear: "Ano",
           timeGridWeek: "Semana"
