@@ -26,13 +26,9 @@ const Calendar = () => {
         initialView="dayGridMonth"
         locale={"pt-br"}
         headerToolbar={{
-          start: "prev",
+          start: "timeGridWeek,dayGridMonth,multiMonthYear",
           center: "title",
-          end: "next",
-        }}
-        footerToolbar={{
-          start: "today",
-          end: "timeGridWeek,dayGridMonth,multiMonthYear",
+          end: "today prev,next",
         }}
         buttonText={{
           today: "Data atual",
