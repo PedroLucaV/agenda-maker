@@ -22,6 +22,9 @@ const Calendar = () => {
           multiMonthPlugin,
           timeGridPlugin,
         ]}
+        dayHeaderFormat={{
+          weekday: "long"
+        }}
         themeSystem="bootstrap5"
         initialView="dayGridMonth"
         locale={"pt-br"}

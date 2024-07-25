@@ -1,12 +1,11 @@
+/* Calendar Wrapper: */
 .calendar {
   padding: 0;
   width: 960px;
   background-color: #d9d9d9;
 }
 
-.fc {
-  /* border: 1px solid red; */
-}
+/* FullCalendar Header: */
 .fc .fc-header-toolbar {
   padding: 1.5rem;
   border-radius: 1rem 1rem 0 0;
@@ -21,6 +20,30 @@
 }
 .fc .fc-daygrid-day.fc-day-today {
   background-color: hsl(47, 100%, 85%);
+}
+
+/* Weekday Row */
+thead table[role=presentation] {
+  height: 40px;
+  background-color: hsla(254, 100%, 47%, 0.35); 
+  border-radius: 1rem 1rem 0 0;
+}
+/* MAYBE WILL BE USED:
+  thead .fc-col-header-cell {
+    border: none;
+  } 
+*/
+thead .fc-scrollgrid-sync-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+thead .fc-scrollgrid-sync-inner a {
+  color: white;
+  font-weight: 700;
+  text-decoration-line: none;
+  text-transform: capitalize;
 }
 
 /* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
