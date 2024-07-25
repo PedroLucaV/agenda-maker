@@ -1,0 +1,15 @@
+/** PROJECT FONTS **/
+@font-face {
+    font-family: "Fira Sans";
+    src: url(./assets/fonts/Fira_Sans/FiraSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url(./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+/** GLOBAL PROPERTIES: **/
+* {
+    font-family: "Fira Sans", sans-serif;
+}
