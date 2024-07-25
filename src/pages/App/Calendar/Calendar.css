@@ -7,7 +7,7 @@
 
 /* FullCalendar Header: */
 .fc .fc-header-toolbar {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem 1rem 0 0;
   background-color: #3900F080;
 }
@@ -20,6 +20,11 @@
 }
 .fc .fc-daygrid-day.fc-day-today {
   background-color: hsl(47, 100%, 85%);
+}
+.fc-daygrid-day-number {
+  color: #383838;
+  font-weight: 900;
+  text-decoration-line: none;
 }
 
 /* Weekday Row */
