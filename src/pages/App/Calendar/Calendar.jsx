@@ -30,6 +30,11 @@ const Calendar = () => {
           center: "title",
           end: "today prev,next",
         }}
+        businessHours={{
+          daysOfWeek: [ 1, 2, 3, 4, 5 ], // Segunda - Sexta
+          startTime: '6:00',
+          endTime: '20:00'
+        }}
         buttonText={{
           today: "Data atual",
           dayGridMonth: "Mês",

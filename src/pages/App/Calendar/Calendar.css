@@ -22,13 +22,6 @@
 .fc .fc-daygrid-day.fc-day-today {
   background-color: hsl(47, 100%, 85%);
 }
-.fc .fc-daygrid-day.fc-day-sun, 
-.fc .fc-daygrid-day.fc-day-sat {
-  background-color: hsl(0, 0%, 90%);
-}
-.fc .fc-day-other {
-  opacity: 0.85;
-}
 
 /* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
 .calendar .header {
