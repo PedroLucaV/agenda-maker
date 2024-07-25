@@ -11,6 +11,7 @@ import "./Calendar.css";
 // Modules:
 import onDateClick from "../../../modules/onDateClick";
 import onEventClick from "../../../modules/onEventClick";
+import { july_2024 } from "../../../modules/eventArrays";
 
 const Calendar = () => {
   return (
@@ -22,9 +23,7 @@ const Calendar = () => {
           multiMonthPlugin,
           timeGridPlugin,
         ]}
-        dayHeaderFormat={{
-          weekday: "long"
-        }}
+        contentHeight="675px"
         themeSystem="bootstrap5"
         initialView="dayGridMonth"
         locale={"pt-br"}
@@ -46,10 +45,7 @@ const Calendar = () => {
         }}
         eventClick={({event}) => onEventClick(event)}
         dateClick={(date) => onDateClick(date)}
-        events={[
-          { title: "Olá mundo!", date: "2024-07-22" },
-          { title: "Aniversário da Empresa", date: "2024-07-02" },
-        ]}
+        events={july_2024}
       />
     </section>
   );
