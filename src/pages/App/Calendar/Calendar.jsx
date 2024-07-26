@@ -39,7 +39,8 @@ const Calendar = () => {
           },
           timeGridWeek: {
             dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' },
-            eventMaxStack: 2
+            eventMaxStack: 2,
+            nowIndicator: true
           },
           multiMonthYear: {
             dayHeaderFormat: { weekday: "narrow" },
