@@ -32,6 +32,12 @@
   font-weight: 900;
   text-decoration-line: none;
 }
+.fc-day-other {
+  opacity: 0.75;
+}
+.fc-day-other .fc-daygrid-day-events {
+  opacity: 0.5;
+}
 
 /* Weekday Row */
 thead table[role=presentation] {
