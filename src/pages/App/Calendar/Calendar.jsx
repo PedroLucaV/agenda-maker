@@ -25,17 +25,31 @@ const Calendar = () => {
         ]}
         contentHeight="675px"
         themeSystem="bootstrap5"
-        initialView="dayGridMonth"
         locale={"pt-br"}
+        overlap={"false"}
+        initialView="dayGridMonth"
         headerToolbar={{
           start: "timeGridWeek,dayGridMonth,multiMonthYear",
           center: "title",
           end: "today prev,next",
         }}
+        views={{
+          dayGridMonth: {
+            dayHeaderFormat: { weekday: "long" },
+            fixedWeekCount: true,
+            showNonCurrentDates: false
+          },
+          timeGridWeek: {
+            dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' }
+          },
+          multiMonthYear: {
+            dayHeaderFormat: { weekday: "narrow" }
+          }
+        }}
         businessHours={{
           daysOfWeek: [ 1, 2, 3, 4, 5 ], // Segunda - Sexta
           startTime: '6:00',
-          endTime: '20:00'
+          endTime: '18:00'
         }}
         buttonText={{
           today: "Data atual",
