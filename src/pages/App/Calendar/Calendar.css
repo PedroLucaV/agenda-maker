@@ -50,11 +50,9 @@ thead table[role=presentation] {
   background-color: hsla(254, 100%, 47%, 0.35); 
   border-radius: 1rem 1rem 0 0;
 }
-/* MAYBE WILL BE USED:
-  thead .fc-col-header-cell {
-    border: none;
-  } 
-*/
+thead .fc-col-header-cell {
+  border: none;
+}
 thead .fc-scrollgrid-sync-inner {
   display: flex;
   align-items: center;
