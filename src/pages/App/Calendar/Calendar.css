@@ -21,7 +21,8 @@
 }
 
 /* Grid Days: */
-.fc .fc-daygrid-day.fc-day {
+.fc .fc-daygrid-day.fc-day,
+.fc-timegrid-slot.fc-timegrid-slot-lane {
   background-color: white;
 }
 .fc .fc-daygrid-day.fc-day-today {
@@ -38,8 +39,12 @@
 .fc-day-other .fc-daygrid-day-events {
   opacity: 0.5;
 }
+.fc .fc-daygrid-day.fc-day.fc-day-disabled {
+  background-color: #f2f2f280;
+}
 
-/* Weekday Row */
+/* Rows & Columns */
+.fc-multimonth-header-table,
 thead table[role=presentation] {
   height: 40px;
   background-color: hsla(254, 100%, 47%, 0.35); 
@@ -61,6 +66,11 @@ thead .fc-scrollgrid-sync-inner a {
   font-weight: 700;
   text-decoration-line: none;
   text-transform: capitalize;
+}
+.fc-timegrid-axis.fc-scrollgrid-shrink,
+.fc-timegrid-slot-label, 
+.fc-timegrid-slot-minor {
+  background-color: hsla(254, 100%, 47%, 0.35);
 }
 
 /* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
