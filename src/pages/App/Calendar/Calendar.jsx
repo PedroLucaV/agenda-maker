@@ -26,7 +26,6 @@ const Calendar = () => {
         contentHeight="675px"
         themeSystem="bootstrap5"
         locale={"pt-br"}
-        overlap={"false"}
         initialView="dayGridMonth"
         headerToolbar={{
           start: "timeGridWeek,dayGridMonth,multiMonthYear",
