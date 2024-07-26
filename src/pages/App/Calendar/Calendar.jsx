@@ -11,7 +11,7 @@ import "./Calendar.css";
 // Modules:
 import onDateClick from "../../../modules/onDateClick";
 import onEventClick from "../../../modules/onEventClick";
-import { july_2024 } from "../../../modules/eventArrays";
+import { july_2024 } from "../../../data/eventArrays";
 
 const Calendar = () => {
   return (
@@ -34,10 +34,12 @@ const Calendar = () => {
         }}
         views={{
           dayGridMonth: {
-            dayHeaderFormat: { weekday: "long" }
+            dayHeaderFormat: { weekday: "long" },
+            dayMaxEvents: 3
           },
           timeGridWeek: {
-            dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' }
+            dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' },
+            eventMaxStack: 2
           },
           multiMonthYear: {
             dayHeaderFormat: { weekday: "narrow" },
