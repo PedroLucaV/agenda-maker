@@ -73,21 +73,3 @@ thead .fc-scrollgrid-sync-inner a {
   background-color: hsla(254, 100%, 47%, 0.35);
   color: white;
 }
-
-/* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
-.calendar .header {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 6rem;
-  background-color: #3800f080; /* 50% de transparência */
-}
-.calendar .header .title {
-  color: white;
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-.calendar .header .rf {
-  transform: rotate(180deg); /* Inverte a posição da seta */
-}
-/* =:=:=:=:= UNUSED CODE - END =:=:=:=:= */
