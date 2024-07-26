@@ -35,21 +35,20 @@ const Calendar = () => {
         }}
         views={{
           dayGridMonth: {
-            dayHeaderFormat: { weekday: "long" },
-            fixedWeekCount: true,
-            showNonCurrentDates: false
+            dayHeaderFormat: { weekday: "long" }
           },
           timeGridWeek: {
             dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' }
           },
           multiMonthYear: {
-            dayHeaderFormat: { weekday: "narrow" }
+            dayHeaderFormat: { weekday: "narrow" },
+            fixedWeekCount: false
           }
         }}
         businessHours={{
           daysOfWeek: [ 1, 2, 3, 4, 5 ], // Segunda - Sexta
-          startTime: '6:00',
-          endTime: '18:00'
+          startTime: '6:15',
+          endTime: '19:45'
         }}
         buttonText={{
           today: "Data atual",
