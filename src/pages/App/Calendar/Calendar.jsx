@@ -45,6 +45,9 @@ const Calendar = () => {
             fixedWeekCount: false
           }
         }}
+        validRange={{
+          start: '2024-01-01'
+        }}
         businessHours={{
           daysOfWeek: [ 1, 2, 3, 4, 5 ], // Segunda - Sexta
           startTime: '6:15',
