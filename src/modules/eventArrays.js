@@ -22,22 +22,21 @@ export const july_2024 = [
     backgroundColor: "#444444",
     borderColor: "#444444",
   },
-  { 
-    title: "Scrum dos Dias Pares n°1",
-    allDay: false,
-    start: "2024-07-22 08:00",
-    end: "2024-07-22 09:15"
+  {
+    title: "E.D. - Scrum Alternado",
+    interactive: 'true',
+    display: "list-item",
+    daysOfWeek: [1, 3, 5],
+    startTime: "08:00",
+    endTime: "09:15",
+    startRecur: "2024-07-09",
+    endRecur: "2024-08-10"
   },
-  { 
-    title: "Scrum dos Dias Pares n°2",
-    allDay: false,
-    start: "2024-07-24 08:00",
-    end: "2024-07-24 09:15"
-  },
-  { 
-    title: "Scrum dos Dias Pares n°3",
-    allDay: false,
-    start: "2024-07-26 08:00",
-    end: "2024-07-26 09:15"
-  },
+  {
+    title: "(Dia Bloqueado)",
+    display: 'background',
+    start: '2024-07-15',
+    end: '2024-07-17',
+    backgroundColor: "#FF9E88"
+  }
 ]
