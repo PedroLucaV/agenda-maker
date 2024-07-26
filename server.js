@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import sequelize from './config/dbconfig.js';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 import userRoutes from "./routes/usersRoutes.js";
 import appoitmentRoutes from './routes/appoitmentsRoutes.js'
@@ -11,6 +12,7 @@ const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 app.use("/users", userRoutes);
 app.use('/appointments', appoitmentRoutes)
