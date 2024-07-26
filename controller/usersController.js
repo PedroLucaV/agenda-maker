@@ -18,8 +18,8 @@ export const createUser = async (req, res) => {
         is_admin,
         telefone
       });
-  
-      res.status(201).json(newUser);
+      
+      res.redirect('http://localhost:5173/dashboard', 201)
     } catch (error) {
       res.status(400).json({ message: error.message });
     }
