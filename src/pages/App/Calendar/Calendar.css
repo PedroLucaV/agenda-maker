@@ -71,6 +71,7 @@ thead .fc-scrollgrid-sync-inner a {
 .fc-timegrid-slot-label, 
 .fc-timegrid-slot-minor {
   background-color: hsla(254, 100%, 47%, 0.35);
+  color: white;
 }
 
 /* =:=:=:=:= UNUSED CODE - Replicate this behaviour on FullCalendar =:=:=:=:= */
