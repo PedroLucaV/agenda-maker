@@ -11,12 +11,18 @@
   border-radius: 1rem 1rem 0 0;
   background-color: #3900F080;
 }
+.fc .fc-header-toolbar .fc-toolbar-title {
+  color: white;
+}
+
+/* FullCalendar Display (Calendar): */
 .fc-view-harness {
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
+/* Grid Days: */
 .fc .fc-daygrid-day.fc-day {
-  background-color: #FFF;
+  background-color: white;
 }
 .fc .fc-daygrid-day.fc-day-today {
   background-color: hsl(47, 100%, 85%);
