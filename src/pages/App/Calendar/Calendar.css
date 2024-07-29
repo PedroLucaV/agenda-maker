@@ -72,8 +72,7 @@
 }
 
 /* Rows & Columns */
-.fc-multimonth-header-table,
-thead table[role=presentation] {
+.fc-col-header, .fc-multimonth-header-table {
   height: 40px;
   background-color: hsla(254, 100%, 47%, 0.35); 
   border-radius: 1rem 1rem 0 0;
