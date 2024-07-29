@@ -22,10 +22,12 @@
 }
 
 .fc .fc-button-primary {
+  transition: 0.1s linear;
   background-color: #896ce4;
   border: none;
 }
 .fc .fc-button-primary:hover {
+  transition: 0.1s linear;
   background-color: #7d63d1;
   border: none;
 }
@@ -45,15 +47,19 @@
 }
 
 .fc .fc-button-primary.fc-prev-button {
+  transition: 0.2s linear;
   border-right: none;
 }
 .fc .fc-button-primary.fc-next-button {
+  transition: 0.2s linear;
   border-left: none;
 }
 .fc .fc-button-primary.fc-prev-button:active {
+  transition: 0.2s linear;
   background-color: #5c499c;
 }
 .fc .fc-button-primary.fc-next-button:active {
+  transition: 0.2s linear;
   background-color: #5c499c;
 }
 
