@@ -16,14 +16,34 @@
 }
 
 /* Header Buttons: */
+.fc .fc-toolbar-chunk .fc-button-group {
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 4px;
+}
+
 .fc .fc-button-primary {
   background-color: #896ce4;
-  border-color: rgb(191, 191, 191);
+  border: none;
 }
 .fc .fc-button-primary:hover {
   background-color: #7d63d1;
-  border-color: rgb(191, 191, 191);
+  border: none;
 }
+
+.fc .fc-button-primary.fc-today-button {
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 4px;
+}
+.fc .fc-button-primary.fc-today-button:not(:disabled):hover {
+  background-color: #7d63d1;
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 4px;
+}
+.fc .fc-button-primary.fc-today-button:not(:disabled):active {
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 4px;
+}
+
 .fc .fc-button-primary.fc-prev-button {
   border-right: none;
 }
@@ -32,15 +52,21 @@
 }
 .fc .fc-button-primary.fc-prev-button:active {
   background-color: #5c499c;
-  border-color: rgb(191, 191, 191);
 }
 .fc .fc-button-primary.fc-next-button:active {
   background-color: #5c499c;
-  border-color: rgb(191, 191, 191);
 }
-.fc .fc-button-primary:not(:disabled).fc-button-active {
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
   background-color: #5c499c;
-  border-color: rgb(191, 191, 191);
+  border: none;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #5c499c;
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 4px;
 }
 
 /* FullCalendar Display (Calendar): */
@@ -72,9 +98,10 @@
 }
 
 /* Rows & Columns */
-.fc-col-header, .fc-multimonth-header-table {
+.fc-col-header,
+.fc-multimonth-header-table {
   height: 40px;
-  background-color: hsla(254, 100%, 47%, 0.35); 
+  background-color: hsla(254, 100%, 47%, 0.35);
   border-radius: 1rem 1rem 0 0;
 }
 thead .fc-col-header-cell {
@@ -93,7 +120,7 @@ thead .fc-scrollgrid-sync-inner a {
   text-transform: capitalize;
 }
 .fc-timegrid-axis.fc-scrollgrid-shrink,
-.fc-timegrid-slot-label, 
+.fc-timegrid-slot-label,
 .fc-timegrid-slot-minor {
   background-color: hsla(254, 100%, 47%, 0.35);
   color: white;
