@@ -110,6 +110,9 @@
   background-color: hsla(254, 100%, 47%, 0.35);
   border-radius: 1rem 1rem 0 0;
 }
+.fc-scroller-liquid-absolute {
+  border-radius: 0 0 1rem 1rem;
+}
 thead .fc-col-header-cell {
   border: none;
 }
