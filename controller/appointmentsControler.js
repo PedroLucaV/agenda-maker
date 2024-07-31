@@ -56,3 +56,13 @@ export const getByMonth = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 }
+
+export const deleteById = async (req, res) => {
+  const {id} = req.params;
+  try{
+    await Appointments.destroy({where: {id: id}});
+    res.status(204);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
