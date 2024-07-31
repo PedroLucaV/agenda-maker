@@ -39,6 +39,9 @@ export const alterInfoAppointment =  async (req, res) => {
     const {data_bloqueda} = req.body;
     try {
       const agendamento = await Appointments.findByPk(id);
+      if(!agendamento){
+        return res.status(404).json({message: "Não há nenhum agendamento com este ID!"});
+      }
       agendamento.data_bloqueda = data_bloqueda;
       await agendamento.save();
       res.json(agendamento)
@@ -51,7 +54,10 @@ export const getByMonth = async (req, res) => {
   const {month} = req.params;
   try{
     const allDate = await Appointments.findOne({where: {mes: month}});
-    res.json(allDate);
+    if(!allDate){
+      return res.status(404).json({message: "Não há nenhum agendamento com este mês!"});
+    }
+    res.status(200).json(allDate);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -60,8 +66,13 @@ export const getByMonth = async (req, res) => {
 export const deleteById = async (req, res) => {
   const {id} = req.params;
   try{
+    const appoitment = await Appointments.findOne({where: {id: id}});
+    if(!appoitment){
+      return res.status(404).json({message: "Não há nenhum agendamento com este ID!"});
+    }
     await Appointments.destroy({where: {id: id}});
     res.status(204);
+    res.end();
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
