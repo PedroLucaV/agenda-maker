@@ -14,6 +14,7 @@ CREATE TABLE appointments (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(255) NOT NULL,
     descricao TEXT,
+    categoria VARCHAR(255) NOT NULL,
     data_marcada DATETIME NOT NULL,
     data_termino DATETIME NOT NULL,
     data_bloqueda BOOLEAN NOT NULL DEFAULT FALSE,

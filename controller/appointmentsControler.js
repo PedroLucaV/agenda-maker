@@ -1,5 +1,6 @@
 import Appointments from "../models/Appointments.js";
 import { v4 as uuidv4 } from 'uuid';
+import dayjs from "dayjs";
 
 export const listAppointments = async (req, res) => {
     try {
@@ -12,6 +13,7 @@ export const listAppointments = async (req, res) => {
 
 export const createAppointments = async (req, res) => {
     const { titulo, descricao, categoria, data_marcada, data_termino, data_bloqueda, usuario_id } = req.body;
+    const mes = dayjs(data_marcada.data_marcada).month();
   
     try {
       const newAppointment = await Appointments.create({
@@ -19,6 +21,7 @@ export const createAppointments = async (req, res) => {
         titulo,
         descricao,
         categoria,
+        mes,
         data_marcada,
         data_termino,
         data_bloqueda,
@@ -43,3 +46,13 @@ export const alterInfoAppointment =  async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   }
+
+export const getByMonth = async (req, res) => {
+  const {month} = req.params;
+  try{
+    const allDate = await Appointments.findOne({where: {mes: month}});
+    res.json(allDate);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
