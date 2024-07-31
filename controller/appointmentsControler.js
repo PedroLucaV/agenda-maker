@@ -13,7 +13,7 @@ export const listAppointments = async (req, res) => {
 
 export const createAppointments = async (req, res) => {
     const { titulo, descricao, categoria, data_marcada, data_termino, data_bloqueda, usuario_id } = req.body;
-    const mes = dayjs(data_marcada.data_marcada).month();
+    const mes = dayjs(data_marcada.data_marcada.split(' ')[0]).month();
   
     try {
       const newAppointment = await Appointments.create({
