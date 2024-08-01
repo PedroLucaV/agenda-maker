@@ -9,8 +9,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import "./Calendar.css";
 
 // Modules:
-import onDateClick from "../../../modules/onDateClick";
-import onEventClick from "../../../modules/onEventClick";
+import onDateClick from "../../../helpers/onDateClick";
+import onEventClick from "../../../helpers/onEventClick";
 import { placeholder } from "../../../data/eventArrays";
 
 const Calendar = () => {
