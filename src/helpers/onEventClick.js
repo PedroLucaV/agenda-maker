@@ -1,5 +1,5 @@
 const onEventClick = (event) => {
-  alert(`Um evento foi clicado! \nNome: ${event.title}`);
+  alert(`Um evento foi clicado! \nNome: ${event.title} \nDescrição: ${event.extendedProps.description}`);
 
   // Verificação para a criação de eventos:
   if (event.groupId == 'blocked') {
