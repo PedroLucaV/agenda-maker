@@ -1,6 +1,10 @@
-const onEventClick = (info) => {
-  console.log(info)
-  alert(`Um evento foi clicado! \nNome: ${info.title}`);
+const onEventClick = (event) => {
+  alert(`Um evento foi clicado! \nNome: ${event.title}`);
+
+  // Verificação para a criação de eventos:
+  if (event.groupId == 'blocked') {
+    console.log(`${event.startStr} - Dia bloqueado para a criação de eventos.`)
+  }
 };
 
-export default onEventClick
+export default onEventClick;

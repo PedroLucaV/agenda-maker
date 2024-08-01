@@ -15,7 +15,10 @@ import { july_2024 } from "../../../data/eventArrays";
 
 const Calendar = () => {
   return (
-    <section className="container calendar h-100 border-0 rounded-4">
+    <section
+      id="calendarWrapper"
+      className="container calendar h-100 border-0 rounded-4"
+    >
       <FullCalendar
         plugins={[
           dayGridPlugin,

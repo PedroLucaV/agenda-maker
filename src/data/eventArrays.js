@@ -97,10 +97,17 @@ export const july_2024 = [
     borderColor: "#f59b42"
   },
   {
-    title: "(Dia Bloqueado)",
+    groupId: "blocked",
+    title: "(Dias Bloqueados)",
     display: 'background',
-    start: '2024-07-15',
-    end: '2024-07-17',
+    date: '2024-07-15',
+    backgroundColor: "#FF9E88"
+  },
+  {
+    groupId: "blocked",
+    title: "",
+    display: 'background',
+    date: '2024-07-16',
     backgroundColor: "#FF9E88"
   }
 ]
