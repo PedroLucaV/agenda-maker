@@ -13,6 +13,7 @@ import { placeholder } from "../../../data/eventArrays";
 
 // Modules:
 import { useRef } from "react";
+import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent";
 import onDateClick from "../../../helpers/onDateClick";
 import onEventClick from "../../../helpers/onEventClick";
 
@@ -79,6 +80,10 @@ const Calendar = () => {
           (date) => onDateClick(date, calendarRef)
         }
         events={placeholder}
+      />
+      <BtnCreateEvent 
+        text="Criar um evento"
+        ref={calendarRef}
       />
     </section>
   );
