@@ -8,18 +8,24 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 // Stylesheets:
 import "./Calendar.css";
 
-// Modules:
-import onDateClick from "../../../helpers/onDateClick";
-import onEventClick from "../../../helpers/onEventClick";
+// Placeholder data:
 import { placeholder } from "../../../data/eventArrays";
 
+// Modules:
+import { useRef } from "react";
+import onDateClick from "../../../helpers/onDateClick";
+import onEventClick from "../../../helpers/onEventClick";
+
 const Calendar = () => {
+  const calendarRef = useRef(null)
+
   return (
     <section
       id="calendarWrapper"
       className="container calendar h-100 border-0 rounded-4"
     >
       <FullCalendar
+        ref={calendarRef}
         plugins={[
           dayGridPlugin,
           interactionPlugin,
@@ -65,7 +71,7 @@ const Calendar = () => {
           timeGridWeek: "Semana",
         }}
         eventClick={({event}) => onEventClick(event)}
-        dateClick={(date) => onDateClick(date)}
+        dateClick={(date) => onDateClick(date, calendarRef)}
         events={placeholder}
       />
     </section>
