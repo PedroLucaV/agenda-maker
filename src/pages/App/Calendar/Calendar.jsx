@@ -70,8 +70,14 @@ const Calendar = () => {
           multiMonthYear: "Ano",
           timeGridWeek: "Semana",
         }}
-        eventClick={({event}) => onEventClick(event)}
-        dateClick={(date) => onDateClick(date, calendarRef)}
+        eventClick={
+          /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE EVENTO */
+          ({event}) => onEventClick(event)
+        }
+        dateClick={
+          /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE DATA */
+          (date) => onDateClick(date, calendarRef)
+        }
         events={placeholder}
       />
     </section>
