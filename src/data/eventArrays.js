@@ -1,4 +1,4 @@
-export const july_2024 = [
+export const placeholder = [
   { 
     title: "Aniversário da Empresa", 
     allDay: true,

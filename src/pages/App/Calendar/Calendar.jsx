@@ -11,7 +11,7 @@ import "./Calendar.css";
 // Modules:
 import onDateClick from "../../../modules/onDateClick";
 import onEventClick from "../../../modules/onEventClick";
-import { july_2024 } from "../../../data/eventArrays";
+import { placeholder } from "../../../data/eventArrays";
 
 const Calendar = () => {
   return (
@@ -66,7 +66,7 @@ const Calendar = () => {
         }}
         eventClick={({event}) => onEventClick(event)}
         dateClick={(date) => onDateClick(date)}
-        events={july_2024}
+        events={placeholder}
       />
     </section>
   );
