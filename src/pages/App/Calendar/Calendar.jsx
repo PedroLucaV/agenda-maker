@@ -83,7 +83,7 @@ const Calendar = () => {
       />
       <BtnCreateEvent 
         text="Criar um evento"
-        ref={calendarRef}
+        fcref={calendarRef}
       />
     </section>
   );
