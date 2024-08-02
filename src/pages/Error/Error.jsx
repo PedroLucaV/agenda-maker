@@ -1,7 +1,10 @@
 import "./Error.css";
+import ErrorPage from './Components/ErrorPage.jsx'
 
 const Error = () => {
-  return <h1>Página de Erro (404 Not Found)</h1>;
+  return(
+    <div className="ErrorBody"><ErrorPage/></div>
+  );
 };
 
 export default Error;
