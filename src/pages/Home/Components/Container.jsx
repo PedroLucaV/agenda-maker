@@ -7,7 +7,8 @@ const HomeContainer = () => {
     }
 
     return (
-      <div className="container home-container bg-white rounded shadow">
+     <div className="body">
+       <div className="container home-container bg-white rounded shadow">
         <div className="separator"></div>
         <div className="left-section">
           <h1>AGENDA MAKER</h1>
@@ -37,11 +38,7 @@ const HomeContainer = () => {
           </button>
         </div>
       </div>
-const Container = () => {
-    return(
-        <div className="d-flex justify-content-center bg-light container">Main</div>
+     </div>
+    )}
 
-    );
-}
-
-export default Container;
+export default HomeContainer;

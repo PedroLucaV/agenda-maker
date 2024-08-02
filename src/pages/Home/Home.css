@@ -10,7 +10,8 @@
     justify-content: center;
     background-image: url('../../assets/images/LoginBg.png');
     background-size: cover;
-
+    width: 100vw;
+    height: 100vh;
     background-position: center;
     position: relative;
   }
