@@ -14,8 +14,8 @@ import { placeholder } from "../../../data/eventArrays";
 // Modules:
 import { useRef } from "react";
 /* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
-import onDateClick from "../../../helpers/onDateClick";
-import onEventClick from "../../../helpers/onEventClick";
+import onDateClick from "../../../tests/onDateClick";
+import onEventClick from "../../../tests/onEventClick";
 
 const Calendar = () => {
   const calendarRef = useRef(null)

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // Helpers:
-import createEvent from "../../../helpers/create-event-tester";
+import createEvent from "../../../tests/createEventTester";
 
 // Stylesheet:
 import "./BtnCreateEvent.css"
