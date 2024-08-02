@@ -19,8 +19,8 @@
   }
   
   .home-container {
-    background-color: white;
-    border-radius: 42%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;

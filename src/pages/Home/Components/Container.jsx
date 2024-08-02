@@ -1,9 +1,13 @@
 import agendaMakerLogo from '../../../assets/images/logo_agenda_maker.png'
 
 const HomeContainer = () => {
+    const goToLogin = () => {
+      window.location.href = '/login';
+    }
+
     return (
       <div className="container home-container bg-white rounded shadow">
-        <div className="separator"></div> {/* Linha de separação */}
+        <div className="separator"></div>
         <div className="left-section">
           <h1>AGENDA MAKER</h1>
           <img src={agendaMakerLogo} alt="AM Logo" className="img-fluid my-3" />
@@ -27,9 +31,8 @@ const HomeContainer = () => {
               <p className='text-lis'>Calendário dinâmico e adaptado para feriados e datas comemorativas!</p>
             </li>
           </ul>
-          <button className="btn login-btn btn-dark d-flex align-items-center">
-            <img src="/logo-microsoft.png" alt="Microsoft Logo" />
-            <p className=''>Sign in with Microsoft</p>
+          <button onClick={goToLogin} className="btn login-btn btn-dark d-flex align-items-center">
+            <p className=''>Sign In</p>
           </button>
         </div>
       </div>
