@@ -9,13 +9,13 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import "./Calendar.css";
 
 // Placeholder data:
-import { placeholder } from "../../../data/eventArrays";
+import { placeholder } from "../../data/eventArrays";
 
 // Modules:
 import { useRef } from "react";
 /* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
-import onDateClick from "../../../tests/onDateClick";
-import onEventClick from "../../../tests/onEventClick";
+import onDateClick from "../../tests/onDateClick";
+import onEventClick from "../../tests/onEventClick";
 
 const Calendar = () => {
   const calendarRef = useRef(null)
