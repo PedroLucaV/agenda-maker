@@ -13,7 +13,7 @@ import { useRef, useState } from "react";
 import getEventList from "../../api/getEventList";
 import onDateClick from "../../tests/onDateClick";
 import onEventClick from "../../tests/onEventClick";
-/* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
+import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent";
 
 const Calendar = () => {
   const calendarRef = useRef(null);
@@ -82,7 +82,7 @@ const Calendar = () => {
         }
         events={eventList}
       />
-      {/* <BtnCreateEvent text="Criar um evento" fcref={calendarRef} /> */}
+      <BtnCreateEvent text="Criar um evento" />
     </section>
   );
 };
