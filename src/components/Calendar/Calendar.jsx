@@ -12,14 +12,10 @@ import "./Calendar.css";
 import { useRef } from "react";
 import onDateClick from "../../tests/onDateClick";
 import onEventClick from "../../tests/onEventClick";
-import getEventList from "../../api/getEventList";
 /* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
 
 const Calendar = () => {
   const calendarRef = useRef(null)
-
-  let eventList = getEventList()
-  console.log(eventList)
 
   return (
     <section
