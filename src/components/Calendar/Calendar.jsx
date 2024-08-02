@@ -9,19 +9,19 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import "./Calendar.css";
 
 // Modules:
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import getEventList from "../../api/getEventList";
 import onDateClick from "../../tests/onDateClick";
 import onEventClick from "../../tests/onEventClick";
 /* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
 
 const Calendar = () => {
-  const calendarRef = useRef(null)
+  const calendarRef = useRef(null);
+  const [eventList, setEventList] = useState([]);
+  getEventList(setEventList);
 
   return (
-    <section
-      id="calendarWrapper"
-      className="container calendar h-100 border-0 rounded-4"
-    >
+    <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
       <FullCalendar
         ref={calendarRef}
         plugins={[
@@ -42,25 +42,29 @@ const Calendar = () => {
         views={{
           dayGridMonth: {
             dayHeaderFormat: { weekday: "long" },
-            dayMaxEvents: 3
+            dayMaxEvents: 3,
           },
           timeGridWeek: {
-            dayHeaderFormat: { weekday: "narrow", month: 'numeric', day: 'numeric' },
+            dayHeaderFormat: {
+              weekday: "narrow",
+              month: "numeric",
+              day: "numeric",
+            },
             eventMaxStack: 2,
-            nowIndicator: true
+            nowIndicator: true,
           },
           multiMonthYear: {
             dayHeaderFormat: { weekday: "narrow" },
-            fixedWeekCount: false
-          }
+            fixedWeekCount: false,
+          },
         }}
         validRange={{
-          start: '2024-01-01'
+          start: "2024-01-01",
         }}
         businessHours={{
-          daysOfWeek: [ 1, 2, 3, 4, 5 ], // Segunda - Sexta
-          startTime: '6:15',
-          endTime: '19:45'
+          daysOfWeek: [1, 2, 3, 4, 5], // Segunda - Sexta
+          startTime: "6:15",
+          endTime: "19:45",
         }}
         buttonText={{
           today: "Data atual",
@@ -70,12 +74,13 @@ const Calendar = () => {
         }}
         eventClick={
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE EVENTO */
-          ({event}) => onEventClick(event)
+          ({ event }) => onEventClick(event)
         }
         dateClick={
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE DATA */
           (date) => onDateClick(date, calendarRef)
         }
+        events={eventList}
       />
       {/* <BtnCreateEvent text="Criar um evento" fcref={calendarRef} /> */}
     </section>
