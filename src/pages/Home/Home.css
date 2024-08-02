@@ -13,11 +13,10 @@
     width: 100vw;
     height: 100vh;
     background-position: center;
-    position: relative;
   }
   
   .footer {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     text-align: center;
     width: 100%;
