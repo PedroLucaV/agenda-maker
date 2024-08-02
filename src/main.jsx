@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Files & Pages:
 import App from "./pages/App/App";

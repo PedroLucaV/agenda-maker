@@ -7,8 +7,8 @@ const HomeContainer = () => {
     }
 
     return (
-     <div className="body">
-       <div className="container home-container bg-white rounded shadow">
+      <div className="body">
+        <div className="container home-container bg-white rounded shadow">
         <div className="separator"></div>
         <div className="left-section">
           <h1>AGENDA MAKER</h1>
