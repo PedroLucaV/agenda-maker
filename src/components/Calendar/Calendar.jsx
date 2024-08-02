@@ -8,17 +8,18 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 // Stylesheets:
 import "./Calendar.css";
 
-// Placeholder data:
-import { placeholder } from "../../../data/eventArrays";
-
 // Modules:
 import { useRef } from "react";
-import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent";
-import onDateClick from "../../../helpers/onDateClick";
-import onEventClick from "../../../helpers/onEventClick";
+import onDateClick from "../../tests/onDateClick";
+import onEventClick from "../../tests/onEventClick";
+import getEventList from "../../api/getEventList";
+/* import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent"; */
 
 const Calendar = () => {
   const calendarRef = useRef(null)
+
+  let eventList = getEventList()
+  console.log(eventList)
 
   return (
     <section
@@ -79,12 +80,8 @@ const Calendar = () => {
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE DATA */
           (date) => onDateClick(date, calendarRef)
         }
-        events={placeholder}
       />
-      <BtnCreateEvent 
-        text="Criar um evento"
-        fcref={calendarRef}
-      />
+      {/* <BtnCreateEvent text="Criar um evento" fcref={calendarRef} /> */}
     </section>
   );
 };
