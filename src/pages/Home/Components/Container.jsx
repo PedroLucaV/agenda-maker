@@ -1,3 +1,4 @@
+
 import agendaMakerLogo from '../../../assets/images/logo_agenda_maker.png'
 
 const HomeContainer = () => {
@@ -36,7 +37,11 @@ const HomeContainer = () => {
           </button>
         </div>
       </div>
+const Container = () => {
+    return(
+        <div className="d-flex justify-content-center bg-light container">Main</div>
+
     );
-  };
-  
-  export default HomeContainer;
+}
+
+export default Container;

@@ -1,11 +1,16 @@
-.home-page {
-    height: 100vh;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-image: url('../../assets/images/LoginBg.png'); /* Substitua pelo caminho da sua imagem */
+    justify-content: center;
+    background-image: url('../../assets/images/LoginBg.png');
     background-size: cover;
+
     background-position: center;
     position: relative;
   }
@@ -85,3 +90,4 @@
     align-self: center;
     width: 80%;
   }
+
