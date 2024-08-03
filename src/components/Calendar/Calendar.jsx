@@ -11,8 +11,8 @@ import "./Calendar.css";
 // Modules:
 import { useRef, useState } from "react";
 import getEventList from "../../api/getEventList";
-import onDateClick from "../../tests/onDateClick";
-import onEventClick from "../../tests/onEventClick";
+import onDateClick from "../../utils/onDateClick";
+import onEventClick from "../../utils/onEventClick";
 import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent";
 
 const Calendar = () => {
