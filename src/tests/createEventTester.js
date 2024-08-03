@@ -30,7 +30,7 @@ const createEvent = () => {
   } while (!end);
 
   do {
-    type = prompt("Digite uma descrição para o evento: ")
+    type = prompt("Digite o tipo do evento: ")
     if (!type) {
       let confirmWindow = confirm("Por favor, digite o tipo do evento.")
       if (confirmWindow === false) {return}
