@@ -24,12 +24,11 @@ const LoginForm = ({ setErrors }) => {
     }
 
     try {
-      const response = await api.post('/users/login', { // Use a instância do axios
+      const response = await api.post('/users/login', {
         email,
         senha
       });
       console.log(response.data);
-      // Redirecionar ou mostrar mensagem de sucesso aqui
     } catch (error) {
       console.error(error);
       setErrors({ apiError: 'Erro ao fazer login.' });

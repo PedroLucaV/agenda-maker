@@ -2,17 +2,17 @@
 import agendaMakerLogo from '../../../assets/images/logo_agenda_maker.png'
 
 const HomeContainer = () => {
-    const goToLogin = () => {
+  const goToLogin = () => {
       window.location.href = '/login';
     }
 
-    return (
-       <div className="home-container bg-white rounded shadow">
-        <div className="left-section">
-          <h1>AGENDA MAKER</h1>
+  return (
+    <div className="home-container bg-white shadow">
+      <div className="left-section">
+        <h1>AGENDA MAKER</h1>
           <img src={agendaMakerLogo} alt="AM Logo" className="img-fluid my-3" />
           <div className="my-3">
-            <img src="/sesi-senai-logo.png" alt="SESI SENAI Logo" className="img-fluid" />
+            <img src="/sesi-senai.webp" alt="SESI SENAI Logo" className="img-fluid" />
           </div>
         </div>
         <div className="separator"></div>
@@ -33,10 +33,11 @@ const HomeContainer = () => {
             </li>
           </ul>
           <button onClick={goToLogin} className="btn login-btn btn-dark d-flex align-items-center">
-            <p className=''>Sign In</p>
+            <p className='text-btn'>Sign In</p>
           </button>
         </div>
-      </div>
-    )}
+    </div>
+  )
+}
 
 export default HomeContainer;
