@@ -1,0 +1,21 @@
+import React from 'react';
+import './ContextMenu.css';
+
+const ContextMenu = ({ items, xPos, yPos, onClose }) => {
+  return (
+    <div 
+      className="context-menu"
+      style={{ top: yPos, left: xPos }}
+      onClick={onClose}
+    >
+      {items.map((item, index) => (
+        <div key={index} className="context-menu-item" onClick={() => item.action()}>
+          <span className="context-menu-item-icon">{item.icon}</span>
+          {item.label}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ContextMenu;
