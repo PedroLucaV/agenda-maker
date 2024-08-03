@@ -13,22 +13,28 @@
     width: 100vw;
     height: 100vh;
     background-position: center;
-  }
+}
   
   .footer {
+    font-size: 20px;
     position: fixed;
     bottom: 20px;
     text-align: center;
     width: 100%;
     color: white;
-  }
+}
+
+.text-lis{
+  font-size: 20px;
+  text-align: left;
+}
   
   .home-container {
+    gap: 25px;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 100%;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    border-radius: 48px;
+    width: 50%;
     min-height: 600px;
     text-align: center;
     position: relative;
@@ -36,7 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
+}
   
   .separator {
     border-left: 2px solid #ddd;
@@ -44,43 +50,57 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
   
   .left-section, .right-section {
     flex: 1;
     padding: 20px;
-  }
+}
   
   .left-section {
     text-align: center;
-  }
+}
   
   .right-section {
     text-align: left;
     flex-direction: column;
-  }
+    gap: 12px;
+}
   
   .left-section img {
     max-width: 100%;
     height: auto;
-  }
+}
   
   .list-unstyled {
     padding-left: 0;
-  }
+}
   
   .list-unstyled li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
+}
   
   .list-unstyled li i {
     margin-right: 10px;
-  }
+}
+.separator{
+  height: 100%;
+}
   
   .login-btn{
     align-self: center;
     width: 80%;
-  }
+}
 
+.bi{
+  font-size: 35px;
+  padding-right: 20px;
+}
+
+.text-btn{
+  font-size: 25px;
+  margin: auto;
+  padding: 5px 0px;
+}
