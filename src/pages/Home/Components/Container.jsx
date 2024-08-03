@@ -7,9 +7,7 @@ const HomeContainer = () => {
     }
 
     return (
-     <div className="body">
-       <div className="container home-container bg-white rounded shadow">
-        <div className="separator"></div>
+       <div className="home-container bg-white rounded shadow">
         <div className="left-section">
           <h1>AGENDA MAKER</h1>
           <img src={agendaMakerLogo} alt="AM Logo" className="img-fluid my-3" />
@@ -17,6 +15,7 @@ const HomeContainer = () => {
             <img src="/sesi-senai-logo.png" alt="SESI SENAI Logo" className="img-fluid" />
           </div>
         </div>
+        <div className="separator"></div>
         <div className="right-section d-flex">
           <h2>Uma forma de simplificar seu agendamento na Maker</h2>
           <ul className="list-unstyled my-3">
@@ -38,7 +37,6 @@ const HomeContainer = () => {
           </button>
         </div>
       </div>
-     </div>
     )}
 
 export default HomeContainer;
