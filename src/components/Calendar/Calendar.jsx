@@ -13,7 +13,10 @@ import { useRef, useState } from "react";
 import getEventList from "../../api/getEventList";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
-import BtnCreateEvent from "../BtnCreateEvent/BtnCreateEvent";
+import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
+
+// Tests:
+import createEvent from "../../tests/createEventTester";
 
 const Calendar = () => {
   const calendarRef = useRef(null);
@@ -82,7 +85,12 @@ const Calendar = () => {
         }
         events={eventList}
       />
-      <BtnCreateEvent text="Criar um evento" />
+      <div className="temp-wrapper d-flex flex-row justify-content-between">
+        <BtnTriggerEvent 
+          text="Criar um evento" 
+          type="btn-primary" 
+          callback={createEvent} />
+      </div>
     </section>
   );
 };
