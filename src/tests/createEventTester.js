@@ -1,4 +1,4 @@
-import postEvent from "../api/addEvent";
+import PostEvent from "../api/AddEvent";
 
 const createEvent = () => {
   // Variables:
@@ -55,7 +55,7 @@ const createEvent = () => {
       usuario_id: "4537c7bc-0d25-4b26-822f-384be08a131b"
     }
   
-    postEvent(eventData);
+    PostEvent(eventData);
   }
 }
 

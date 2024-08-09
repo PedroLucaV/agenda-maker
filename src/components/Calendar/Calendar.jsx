@@ -10,7 +10,7 @@ import "./Calendar.css";
 
 // Modules:
 import { useRef, useState } from "react";
-import getEventList from "../../api/getEventList";
+import GetEventList from "../../api/GetEventList";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
 import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
@@ -21,7 +21,7 @@ import createEvent from "../../tests/createEventTester";
 const Calendar = () => {
   const calendarRef = useRef(null);
   const [eventList, setEventList] = useState([]);
-  getEventList(setEventList);
+  GetEventList(setEventList);
 
   return (
     <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">

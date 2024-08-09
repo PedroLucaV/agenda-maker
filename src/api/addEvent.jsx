@@ -1,7 +1,9 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const postEvent = (eventData) => {
+const PostEvent = (eventData) => {
   const baseUrl = "https://agenda-maker.onrender.com";
+  const navigate = useNavigate();
 
   axios
     .post(`${baseUrl}/appointments/agendamentos`, eventData)
@@ -14,8 +16,12 @@ const postEvent = (eventData) => {
       console.log(data)
     })
     .catch((error) => {
-      console.log(error);
+      const errorStatus = error.response.status;
+      const statusText = error.response.data.message;
+      
+      console.log(errorStatus, statusText);
+      return navigate("/error")
     });
 }
 
-export default postEvent;
+export default PostEvent;

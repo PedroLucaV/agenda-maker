@@ -1,9 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
+import { useEffect } from "react";
 
-const getEventList = (setter) => {
+const GetEventList = (setter) => {
   const baseUrl = "https://agenda-maker.onrender.com";
 
-  axios
+  useEffect(() => {
+    axios
     .get(`${baseUrl}/appointments/agendamentos`)
     .then((response) => {
       const data = response.data;
@@ -13,6 +16,7 @@ const getEventList = (setter) => {
     .catch((error) => {
       console.log(error);
     });
+  }, [])
 };
 
 const parseEventList = (events, setter) => {
@@ -36,4 +40,4 @@ const parseEventList = (events, setter) => {
   setter(list);
 };
 
-export default getEventList;
+export default GetEventList;
