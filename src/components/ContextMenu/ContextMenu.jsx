@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './ContextMenu.css';
 
 const ContextMenu = ({ items, xPos, yPos, onClose }) => {
@@ -9,13 +9,24 @@ const ContextMenu = ({ items, xPos, yPos, onClose }) => {
       onClick={onClose}
     >
       {items.map((item, index) => (
-        <div key={index} className="context-menu-item" onClick={() => item.action()}>
-          <span className="context-menu-item-icon">{item.icon}</span>
+        <div 
+          key={index} 
+          className="context-menu-item" 
+          onClick={() => item.action()}>
+          <span className="context-menu-item-icon">
+            {item.icon}
+          </span>
           {item.label}
         </div>
       ))}
     </div>
   );
 };
+ContextMenu.propTypes = {
+  items: Array, 
+  xPos: Float64Array, 
+  yPos: Float64Array,
+  onClose: Event
+}
 
 export default ContextMenu;
