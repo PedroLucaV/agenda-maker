@@ -3,11 +3,13 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const GetEventList = (setter) => {
+const GetEventList = (setter, loading, setLoading) => {
   const baseUrl = "https://agenda-maker.onrender.com";
   const navigate = useNavigate();
 
   useEffect(() => {
+    setLoading(true)
+
     axios
     .get(`${baseUrl}/appointments/agendamentos`)
     .then((response) => {
@@ -18,6 +20,9 @@ const GetEventList = (setter) => {
     .catch((error) => {
       console.log(error)
       navigate("/error");
+    })
+    .finally(() => {
+      setLoading(false)
     });
   }, [])
 };

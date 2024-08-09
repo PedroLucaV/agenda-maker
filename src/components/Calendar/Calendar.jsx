@@ -19,9 +19,11 @@ import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
 import createEvent from "../../tests/createEventTester";
 
 const Calendar = () => {
-  const calendarRef = useRef(null);
+  const [loading, setLoading] = useState(false)
   const [eventList, setEventList] = useState([]);
-  GetEventList(setEventList);
+  const calendarRef = useRef(null);
+  
+  GetEventList(setEventList, loading, setLoading);
 
   return (
     <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
