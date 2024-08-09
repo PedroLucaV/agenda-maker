@@ -1,9 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const GetEventList = (setter) => {
   const baseUrl = "https://agenda-maker.onrender.com";
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -14,7 +16,8 @@ const GetEventList = (setter) => {
       parseEventList(data, setter);
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error)
+      navigate("/error");
     });
   }, [])
 };
