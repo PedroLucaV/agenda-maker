@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const deleteEvent = (eventId) => {
+const DeleteEvent = (eventId) => {
   const baseUrl = "https://agenda-maker.onrender.com";
 
   axios
@@ -15,4 +15,4 @@ const deleteEvent = (eventId) => {
     });
 }
 
-export default deleteEvent;
+export default DeleteEvent;
