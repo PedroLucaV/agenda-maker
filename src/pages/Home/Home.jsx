@@ -1,13 +1,13 @@
-import "./Home.css";
-import Footer from "./Components/footer";
+import HomeContainer from './Components/Container';
+import Footer from './Components/footer';
+import './Home.css';
+
 const Home = () => {
   return (
-    <>
-      <div className="box">
-      
-      </div>
+    <div className="home-page">
+      <HomeContainer />
       <Footer />
-    </>
+    </div>
   );
 };
 
