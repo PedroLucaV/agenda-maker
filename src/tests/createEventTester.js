@@ -1,4 +1,4 @@
-import PostEvent from "../api/addEvent_";
+import PostEvent from "../api/AddEvent";
 
 const createEvent = () => {
   // Variables:

@@ -10,7 +10,7 @@ import "./Calendar.css";
 
 // Modules:
 import { useRef, useState } from "react";
-import GetEventList from "../../api/getEventList_";
+import GetEventList from "../../api/GetEventList";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
 import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
