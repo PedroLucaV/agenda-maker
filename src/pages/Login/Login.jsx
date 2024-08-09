@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import LoginForm from './Components/LoginForm.jsx';
-import SignupForm from './Components/SignUpForm.jsx';
+import { useState } from 'react';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import SignupForm from '../../components/SignUpForm/SignUpForm';
 import './Login.css';
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
   return (
     <main className='page-body'>
       <div className="container">
-        <h2>{isLogin ? 'Login' : 'Crie uma Conta'}</h2>
+        <h2 id='container-title' className='fs-1 fw-bold'>{isLogin ? 'Login' : 'Crie uma Conta'}</h2>
         {errors.apiError && <div className="alert alert-danger">{errors.apiError}</div>}
         {isLogin ? (
           <LoginForm setErrors={setErrors} />

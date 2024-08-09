@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import api from '../api.js'; // Importe a instância do axios
+import { useState } from 'react';
+import api from '../../pages/Login/api.js'; // Importe a instância do axios
 
 const SignupForm = ({ setErrors }) => {
   const [nome, setNome] = useState('');
@@ -22,7 +22,7 @@ const SignupForm = ({ setErrors }) => {
     if (!email || !validateEmail(email)) {
       formErrors.email = 'Email é obrigatório e deve seguir o formato "aluno.sesi.com.br" ou "docente.sesi.com.br".';
     }
-    if (!senha) {
+    if (!senha || !validateSenha(senha)) {
       formErrors.senha = 'Senha é obrigatória.';
     } else {
       let senhaErrors = [];
@@ -114,5 +114,8 @@ const SignupForm = ({ setErrors }) => {
     </form>
   );
 };
+SignupForm.propTypes = {
+  setErrors: Object.isRequired
+}
 
 export default SignupForm;

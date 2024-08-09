@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import api from '../api.js';
+import { useState } from 'react';
+import api from '../../pages/Login/api.js';
 
+// eslint-disable-next-line react/prop-types
 const LoginForm = ({ setErrors }) => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
