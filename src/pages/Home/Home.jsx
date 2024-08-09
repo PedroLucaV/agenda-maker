@@ -1,13 +1,14 @@
-import HomeContainer from './Components/Container';
-import Footer from './Components/footer';
-import './Home.css';
-
+import "./Home.css";
+import Container from "./Components/Container";
+import Footer from "./Components/footer";
 const Home = () => {
   return (
-    <div className="home-page">
-      <HomeContainer />
-      <Footer />
-    </div>
+    <>
+        <div className="body">
+          <Container></Container>
+          <Footer />
+        </div>
+    </>
   );
 };
 
