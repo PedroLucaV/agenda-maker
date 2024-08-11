@@ -8,6 +8,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 // Stylesheets:
 import "./Calendar.css";
 
+/* eslint-disable no-unused-vars */
+
 // Modules:
 import { useRef, useState } from "react";
 import GetEventList from "../../api/GetEventList";
