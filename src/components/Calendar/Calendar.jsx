@@ -21,6 +21,13 @@ import LoadingScreen from "../LoadingScreen/LoadingScreen";
 // Tests:
 import createEvent from "../../tests/createEventTester";
 
+const handleContextMenu = (arg) => {
+  arg.el.addEventListener("contextmenu", (jsEvent) => {
+    jsEvent.preventDefault()
+    console.log(arg)
+  })
+}
+
 const Calendar = () => {
   const [loading, setLoading] = useState(false)
   const [eventList, setEventList] = useState([]);
@@ -61,6 +68,7 @@ const Calendar = () => {
             },
             eventMaxStack: 2,
             nowIndicator: true,
+            slotLaneDidMount: handleContextMenu
           },
           multiMonthYear: {
             dayHeaderFormat: { weekday: "narrow" },
@@ -85,10 +93,7 @@ const Calendar = () => {
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE EVENTO */
           ({ event }) => onEventClick(event)
         }
-        dateClick={
-          /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE DATA */
-          (date) => onDateClick(date, calendarRef)
-        }
+        dayCellDidMount={handleContextMenu}
         events={eventList}
       />
       {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
