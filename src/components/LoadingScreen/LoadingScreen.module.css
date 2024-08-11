@@ -1,0 +1,14 @@
+.component {
+  width: 960px;
+  height: 723px;
+  margin-top: 72px;
+  background-color: #d9d9d980;
+}
+
+.title,.paragraph {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.title {
+  font-size: 48px;
+}

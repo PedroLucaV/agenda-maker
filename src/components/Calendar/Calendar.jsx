@@ -14,6 +14,7 @@ import GetEventList from "../../api/GetEventList";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
 import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
+import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 // Tests:
 import createEvent from "../../tests/createEventTester";
@@ -27,19 +28,7 @@ const Calendar = () => {
 
   return (
     <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
-      {
-        loading ? (
-          <div 
-            id="loadingScreen"
-            className="z-2 position-absolute d-flex flex-column align-items-center justify-content-center"
-          >
-            <h1 className="fw-semibold">Carregando...</h1>
-            <p className="fs-4">Por favor, aguarde um instante.</p>
-          </div>
-        ) : (
-          console.log("[API] Conteúdo carregado com sucesso.")
-        )
-      }
+      <LoadingScreen loader={loading} />
       <FullCalendar
         ref={calendarRef}
         plugins={[
