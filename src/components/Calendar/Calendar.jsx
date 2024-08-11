@@ -27,6 +27,19 @@ const Calendar = () => {
 
   return (
     <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
+      {
+        loading ? (
+          <div 
+            id="loadingScreen"
+            className="z-2 position-absolute d-flex flex-column align-items-center justify-content-center"
+          >
+            <h1 className="fw-semibold">Carregando...</h1>
+            <p className="fs-4">Por favor, aguarde um instante.</p>
+          </div>
+        ) : (
+          console.log("[API] Conteúdo carregado com sucesso.")
+        )
+      }
       <FullCalendar
         ref={calendarRef}
         plugins={[
@@ -87,12 +100,12 @@ const Calendar = () => {
         }
         events={eventList}
       />
-      <div className="temp-wrapper d-flex flex-row justify-content-between">
+      {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
         <BtnTriggerEvent 
           text="Criar um evento" 
           type="btn-primary" 
           callback={createEvent} />
-      </div>
+      </div> */}
     </section>
   );
 };

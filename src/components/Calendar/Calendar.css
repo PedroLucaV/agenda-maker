@@ -1,8 +1,23 @@
 /* Calendar Wrapper: */
 .calendar {
   padding: 0;
+  z-index: 1;
   width: 960px;
   background-color: #d9d9d9;
+}
+
+/* Loading Screen: */
+.calendar #loadingScreen {
+  width: 960px;
+  height: 723px;
+  margin-top: 72px;
+  background-color: #d9d9d980;
+}
+.calendar #loadingScreen h1, .calendar #loadingScreen p {
+  font-family: "Josefin Sans", sans-serif;
+}
+.calendar #loadingScreen h1 {
+  font-size: 48px;
 }
 
 /* FullCalendar Header: */
