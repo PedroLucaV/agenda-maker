@@ -10,16 +10,16 @@ import "./Calendar.css";
 
 /* eslint-disable no-unused-vars */
 
-// Modules:
+// React Components / Modules:
 import { useRef, useState } from "react";
 import GetEventList from "../../api/GetEventList";
-import onDateClick from "../../utils/onDateClick";
-import onEventClick from "../../utils/onEventClick";
 import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
-// Tests:
+// JS Utils / Tests:
 import createEvent from "../../tests/createEventTester";
+import onDateClick from "../../utils/onDateClick";
+import onEventClick from "../../utils/onEventClick";
 
 const handleContextMenu = (arg) => {
   arg.el.addEventListener("contextmenu", (jsEvent) => {
@@ -29,11 +29,17 @@ const handleContextMenu = (arg) => {
 }
 
 const Calendar = () => {
+  // Render modals:
   const [loading, setLoading] = useState(false)
   const [eventList, setEventList] = useState([]);
-  const calendarRef = useRef(null);
-  
   GetEventList(setEventList, loading, setLoading);
+  
+  // Context menu modals:
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [menu, setMenu] = useState(null);
+  
+  // Calendar instance:
+  const calendarRef = useRef(null);
 
   return (
     <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
