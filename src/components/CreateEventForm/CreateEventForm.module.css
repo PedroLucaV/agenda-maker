@@ -1,0 +1,25 @@
+.popup {
+  width: 560px;
+  background-color: var(--white);
+}
+
+.heading {
+  gap: 1rem;
+  background-color: var(--purple);
+}
+.heading h1 {
+  font-family: "Josefin Sans", sans-serif
+}
+.heading img {
+  width: 32px;
+  height: 32px;
+}
+
+.form {
+  padding: 2rem 0 2rem;
+  gap: 1rem;
+}
+
+.buttonWrapper {
+  gap: 2rem;
+}
