@@ -28,6 +28,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
   },
+  {
+    path: "/error",
+    element: <Error />,
+  }
 ]);
 
 // Creating the React DOM:

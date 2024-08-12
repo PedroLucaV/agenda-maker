@@ -1,6 +1,8 @@
-const createEvent = (calendarRef) => {
+import PostEvent from "../api/AddEvent";
+
+const createEvent = () => {
   // Variables:
-  let title, start, end, description;
+  let title, start, end, type, description;
   
   // Variable validations:
   do {
@@ -28,28 +30,33 @@ const createEvent = (calendarRef) => {
   } while (!end);
 
   do {
+    type = prompt("Digite o tipo do evento: ")
+    if (!type) {
+      let confirmWindow = confirm("Por favor, digite o tipo do evento.")
+      if (confirmWindow === false) {return}
+    }
+  } while (!type);
+
+  do {
     description = prompt("Digite uma descrição para o evento: ")
     if (!description) {
-      let confirmWindow = confirm("Por favor, digite no mínimo a data de término.")
+      let confirmWindow = confirm("Por favor, digite uma descrição para o evento.")
       if (confirmWindow === false) {return}
     }
   } while (!description);
-  
-  // Calling the FullCalendar API
-  const api = calendarRef.current.getApi()
-  
-  api.addEvent({
-    id: 1,
-    title,
-    start,
-    end,
-    type: "Aula",
-    description,
-    backgroundColor: "#3dbdd4",
-    borderColor: "#3dbdd4"
-  })
 
-  console.log(api.getEventById(1))
+  if (title && start && end && type && description) {
+    const eventData = {
+      titulo: title,
+      descricao: description,
+      categoria: type,
+      data_marcada: start,
+      data_termino: end,
+      usuario_id: "4537c7bc-0d25-4b26-822f-384be08a131b"
+    }
+  
+    PostEvent(eventData);
+  }
 }
 
 export default createEvent;
