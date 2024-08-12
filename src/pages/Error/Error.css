@@ -1,0 +1,18 @@
+.container{
+    width: 30%;
+    border-radius: 10%;
+    gap: 25px;
+    height: 50%;
+    background-color: white;
+}
+
+.ErrorBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/images/LoginBg.png');
+    background-position: center;
+    background-size: cover;
+}
