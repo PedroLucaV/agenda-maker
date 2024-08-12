@@ -102,8 +102,7 @@ const Calendar = () => {
               day: "numeric",
             },
             eventMaxStack: 2,
-            nowIndicator: true,
-            slotLaneDidMount: handleContextMenu
+            nowIndicator: true
           },
           multiMonthYear: {
             dayHeaderFormat: { weekday: "narrow" },
@@ -131,12 +130,12 @@ const Calendar = () => {
         dayCellDidMount={(arg) => handleContextMenu(arg, calendarRef, setMenu)}
         events={eventList}
       />
-      <div className="temp-wrapper d-flex flex-row justify-content-between">
+      {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
         <BtnTriggerEvent 
           text="Criar um evento" 
           type="btn-primary" 
           callback={createEvent} />
-      </div>
+      </div> */}
     </section>
   );
 };
