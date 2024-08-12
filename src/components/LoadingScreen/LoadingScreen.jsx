@@ -6,7 +6,7 @@ const LoadingScreen = ({loader: isLoading}) => {
       <div 
         className={
           `${styles.component}
-          position-absolute z-2
+          position-absolute z-3
           d-flex flex-column 
           align-items-center justify-content-center`
         }>

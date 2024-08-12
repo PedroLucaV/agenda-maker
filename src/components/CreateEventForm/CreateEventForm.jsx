@@ -1,6 +1,6 @@
 import styles from "./CreateEventForm.module.css"
 
-const CreateEvent = ({defDate}) => {
+const CreateEventForm = ({defDate}) => {
   return (
     <section className={
       `${styles.popup} 
@@ -111,8 +111,8 @@ const CreateEvent = ({defDate}) => {
     </section>
   );
 }
-CreateEvent.propTypes = {
+CreateEventForm.propTypes = {
   defDate: Date
 }
 
-export default CreateEvent;
+export default CreateEventForm;
