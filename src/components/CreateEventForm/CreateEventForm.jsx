@@ -1,6 +1,8 @@
 import styles from "./CreateEventForm.module.css"
 
 const CreateEventForm = ({defDate}) => {
+  console.log(defDate)
+  
   return (
     <section className={
       `${styles.popup} 

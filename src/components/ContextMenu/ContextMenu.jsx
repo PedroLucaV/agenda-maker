@@ -6,7 +6,6 @@ const ContextMenu = ({ items, xPos, yPos, onClose }) => {
     <div 
       className="context-menu"
       style={{ top: yPos, left: xPos }}
-      onClick={onClose}
     >
       {items.map((item, index) => (
         <div 

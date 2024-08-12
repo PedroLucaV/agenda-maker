@@ -22,6 +22,7 @@ import createEvent from "../../tests/createEventTester";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
 import ContextMenu from "../ContextMenu/ContextMenu";
+import CreateEventForm from "../CreateEventForm/CreateEventForm";
 
 const isAdmin = false
 
@@ -78,6 +79,8 @@ const Calendar = () => {
   const calendarRef = useRef(null);
 
   return (
+    <>
+    {isModalOpen && <CreateEventForm defDate={"2024-08-12"}/>}
     <section 
       id="calendarWrapper" 
       className="calendar h-100 border-0 rounded-4"
@@ -149,6 +152,7 @@ const Calendar = () => {
           callback={createEvent} />
       </div> */}
     </section>
+    </>
   );
 };
 
