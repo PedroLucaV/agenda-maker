@@ -11,15 +11,13 @@ import "./Calendar.css";
 /* eslint-disable no-unused-vars */
 
 // React Components / Modules:
+import { FaCopy, FaPlus, FaTrash, FaCalendar, FaCheckSquare, FaEdit } from 'react-icons/fa';
 import { useRef, useState } from "react";
 import GetEventList from "../../api/GetEventList";
 import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 // JS Utils / Tests:
-import { 
-  dateTimeCMenu
-} from "../../utils/contextMenuItems";
 import createEvent from "../../tests/createEventTester";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
@@ -27,29 +25,43 @@ import ContextMenu from "../ContextMenu/ContextMenu";
 
 const isAdmin = false
 
-const handleContextMenu = (arg, ref, menuSetter) => {
+const handleContextMenu = (arg, itemList, setter) => {
   arg.el.addEventListener("contextmenu", (jsEvent) => {
     jsEvent.preventDefault()
     console.log(arg)
 
-    let items = dateTimeCMenu.global
+    let items = itemList.global
 
     if (isAdmin) {
       items = [
-        ...dateTimeCMenu.admin,
-        ...dateTimeCMenu.global
+        ...items.admin,
+        ...items.global
       ]
     }
 
-    menuSetter({
-      xPos: arg.el.offsetLeft + 350,
-      yPos: arg.el.offsetTop + 80,
+    setter({
+      xPos: arg.el.offsetLeft + 360,
+      yPos: arg.el.offsetTop + 100,
+      date: arg.el.date,
       items,
     });
   })
 }
 
 const Calendar = () => {
+  const dateCMenuItems = {
+    global: [
+      { label: 'Copiar data/hora', action: () => alert('Copiar texto ou imagem clicada'), icon: <FaCopy /> },
+      { label: 'Criar Evento...', action: () => setIsModalOpen(true), icon: <FaPlus /> },
+      { label: 'Editar evento...', action: () => alert('Editar Evento clicada'), icon: <FaEdit /> },
+      { label: 'Apagar Evento', action: () => alert('Apagar Evento clicada'), icon: <FaTrash /> },
+    ],
+    admin: [
+      { label: 'Bloquear/desbloquear data', action: () => alert('Bloquear/desbloquear data clicada'), icon: <FaCalendar /> },
+      { label: 'Ocorrência do evento...', action: () => alert('Ocorrência do evento clicada'), icon: <FaCheckSquare /> }
+    ]
+  }
+
   // Render modals:
   const [loading, setLoading] = useState(false)
   const [eventList, setEventList] = useState([]);
@@ -127,7 +139,7 @@ const Calendar = () => {
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE EVENTO */
           ({ event }) => onEventClick(event)
         }
-        dayCellDidMount={(arg) => handleContextMenu(arg, calendarRef, setMenu)}
+        dayCellDidMount={(arg) => handleContextMenu(arg, dateCMenuItems, setMenu)}
         events={eventList}
       />
       {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
