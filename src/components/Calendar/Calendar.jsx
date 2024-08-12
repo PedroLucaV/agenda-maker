@@ -18,8 +18,7 @@ import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 // JS Utils / Tests:
 import { 
-  global as gbItems, 
-  adminOnly as admItems 
+  dateTimeCMenu
 } from "../../utils/contextMenuItems";
 import createEvent from "../../tests/createEventTester";
 import onDateClick from "../../utils/onDateClick";
@@ -33,15 +32,18 @@ const handleContextMenu = (arg, ref, menuSetter) => {
     jsEvent.preventDefault()
     console.log(arg)
 
-    const items = gbItems
+    let items = dateTimeCMenu.global
 
     if (isAdmin) {
-      items.unshift(...admItems)
+      items = [
+        ...dateTimeCMenu.admin,
+        ...dateTimeCMenu.global
+      ]
     }
 
     menuSetter({
       xPos: arg.el.offsetLeft + 350,
-      yPos: arg.el.offsetTop + 35,
+      yPos: arg.el.offsetTop + 80,
       items,
     });
   })
@@ -129,12 +131,12 @@ const Calendar = () => {
         dayCellDidMount={(arg) => handleContextMenu(arg, calendarRef, setMenu)}
         events={eventList}
       />
-      {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
+      <div className="temp-wrapper d-flex flex-row justify-content-between">
         <BtnTriggerEvent 
           text="Criar um evento" 
           type="btn-primary" 
           callback={createEvent} />
-      </div> */}
+      </div>
     </section>
   );
 };
