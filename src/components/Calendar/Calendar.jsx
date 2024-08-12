@@ -17,14 +17,33 @@ import BtnTriggerEvent from "../BtnTriggerEvent/BtnTriggerEvent";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
 // JS Utils / Tests:
+import { 
+  global as gbItems, 
+  adminOnly as admItems 
+} from "../../utils/contextMenuItems";
 import createEvent from "../../tests/createEventTester";
 import onDateClick from "../../utils/onDateClick";
 import onEventClick from "../../utils/onEventClick";
+import ContextMenu from "../ContextMenu/ContextMenu";
 
-const handleContextMenu = (arg) => {
+const isAdmin = false
+
+const handleContextMenu = (arg, ref, menuSetter) => {
   arg.el.addEventListener("contextmenu", (jsEvent) => {
     jsEvent.preventDefault()
     console.log(arg)
+
+    const items = gbItems
+
+    if (isAdmin) {
+      items.unshift(...admItems)
+    }
+
+    menuSetter({
+      xPos: arg.el.offsetLeft + 350,
+      yPos: arg.el.offsetTop + 35,
+      items,
+    });
   })
 }
 
@@ -33,17 +52,25 @@ const Calendar = () => {
   const [loading, setLoading] = useState(false)
   const [eventList, setEventList] = useState([]);
   GetEventList(setEventList, loading, setLoading);
-  
+
   // Context menu modals:
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [menu, setMenu] = useState(null);
-  
+  const handleClick = () => {
+    setMenu(null);
+  };
+
   // Calendar instance:
   const calendarRef = useRef(null);
 
   return (
-    <section id="calendarWrapper" className="calendar h-100 border-0 rounded-4">
+    <section 
+      id="calendarWrapper" 
+      className="calendar h-100 border-0 rounded-4"
+      onClick={() => setMenu(null)}  
+    >
       <LoadingScreen loader={loading} />
+      {menu && <ContextMenu {...menu} onClose={handleClick} />}
       <FullCalendar
         ref={calendarRef}
         plugins={[
@@ -99,7 +126,7 @@ const Calendar = () => {
           /* SUBSTITUA A FUNÇÃO ABAIXO PARA INSERIR AS OPÇÕES DE EVENTO */
           ({ event }) => onEventClick(event)
         }
-        dayCellDidMount={handleContextMenu}
+        dayCellDidMount={(arg) => handleContextMenu(arg, calendarRef, setMenu)}
         events={eventList}
       />
       {/* <div className="temp-wrapper d-flex flex-row justify-content-between">
